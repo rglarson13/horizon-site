@@ -55,10 +55,6 @@ Coming to Google Play.
 
 Want to help test Horizon before it's released? [Email me](mailto:HorizonNetWorthApp@gmail.com?subject=I%27d%20like%20to%20help%20test%20Horizon) and I'll add you to the testing group.
 
-## Also from me
-
-[Runway](https://rglarson13.github.io/runway-site/) answers the short-term version of the same question: what does my cash flow look like over the next five weeks? Same approach to your privacy -- no accounts, no cloud, no bank connections.
-
 ## Learn more
 
 - [Privacy Policy](privacy-policy.md)
