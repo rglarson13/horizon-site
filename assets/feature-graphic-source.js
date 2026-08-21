@@ -64,13 +64,14 @@ function ray(angleDeg, len, startGap) {
   return `<line x1="${inner.x.toFixed(1)}" y1="${inner.y.toFixed(1)}" x2="${outer.x.toFixed(1)}" y2="${outer.y.toFixed(1)}" stroke="url(#whiteGrad)" stroke-width="26" stroke-linecap="round"/>`;
 }
 
-// The icon art spans roughly y 145..811 in its own space. Scaled to sit
-// with a comfortable margin top and bottom, then nudged left so the
-// wordmark has the right-hand two thirds -- the same balance Runway's
-// feature graphic uses.
-const SCALE = 0.62;
-const ICON_CENTRE_X = 252;
-const ICON_CENTRE_Y = 250;
+// Sized to Runway's feature graphic rather than by eye. Measured off
+// that PNG: its icon art occupies 286px of the 500px height (57%) and
+// its wordmark-plus-tagline block 98px (19%). A first attempt here came
+// out at 83% and 26% -- which read as cramped next to it, because the
+// airiness IS the design.
+const SCALE = 0.43;
+const ICON_CENTRE_X = 249;
+const ICON_CENTRE_Y = 245;
 const ART_CENTRE_Y = 478;
 
 const artwork = `
@@ -123,8 +124,8 @@ const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" 
   <rect x="0" y="0" width="${W}" height="${H}" fill="url(#bgGrad)"/>
   ${artwork}
 
-  <text x="500" y="238" font-family="DejaVu Sans" font-size="86" fill="#ffffff">${WORDMARK}</text>
-  <text x="503" y="300" font-family="DejaVu Sans" font-size="34" fill="#e6edf6">${TAGLINE}</text>
+  <text x="500" y="226" font-family="DejaVu Sans" font-size="64" fill="#ffffff">${WORDMARK}</text>
+  <text x="503" y="272" font-family="DejaVu Sans" font-size="26" fill="#e6edf6">${TAGLINE}</text>
 </svg>`;
 
 // ---- PNG surgery: drop the alpha channel ----
