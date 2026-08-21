@@ -151,15 +151,3 @@ a:hover {
     color: #66c693;
   }
 }
-
-// Horizon has no wide feature graphic yet, so the landing page leads with
-// the app icon. `.hero-banner` is sized for a 1024x500 banner and would
-// blow a square icon up to 700px tall, so square art gets its own class
-// rather than being forced through that one.
-.hero-icon {
-  display: block;
-  width: 180px;
-  height: auto;
-  margin: 0 auto 30px;
-  border-radius: 24px;
-}

@@ -4,7 +4,7 @@ title: About Horizon
 ---
 
 <div>
-  <img src="{{ '/assets/images/icon-1024.png' | relative_url }}" alt="Horizon -- a sun rising over a horizon, with a dollar sign in the sun." class="hero-icon">
+  <img src="{{ '/assets/images/feature-graphic.png' | relative_url }}" alt="Horizon -- a sun with a dollar sign in it, rising over a horizon. Know where you're headed." class="hero-banner">
 </div>
 
 ## Where does this all end up?
