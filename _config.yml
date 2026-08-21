@@ -1,0 +1,14 @@
+theme: minima
+
+sass:
+  style: compressed
+
+title: Horizon
+description: Net-worth projection without accounts, cloud sync, or bank connections.
+author: Robert Larson
+email: HorizonNetWorthApp@gmail.com
+
+header_pages:
+  - privacy-policy.md
+  - get-help.md
+  - about-dev.md

@@ -1,0 +1,165 @@
+---
+---
+
+@import "minima";
+
+// Light mode uses minima's own default palette (already accessible) with
+// the brand green swapped in for links/nav. Dark mode is applied
+// automatically for visitors whose system is set to dark -- there's no
+// manual toggle, this just follows prefers-color-scheme.
+
+// minima styles :visited (and .site-title:visited) links with their own,
+// more specific rules that beat the plain selectors above once a link has
+// been visited -- which is most of them, once you've clicked around the
+// site -- so those need to be listed explicitly too.
+.site-title,
+.site-title:visited,
+.site-nav .page-link,
+a,
+a:visited,
+a:hover {
+  color: #2a6f4a;
+}
+
+.site-title,
+.site-footer strong {
+  font-weight: 700;
+}
+
+// Small icon inline with the "Horizon" site title in the header -- purely
+// decorative (empty alt), same favicon.png already used for the browser
+// tab, just reused here instead of adding a second image asset.
+// Selector scoped through .site-title (not just the bare class) and given
+// !important on the sizing specifically - belt-and-suspenders against
+// minima's own base stylesheet, which may have a more specific rule
+// targeting images inside the header that would otherwise win the cascade
+// and silently shrink this back down regardless of what's set here. The
+// width/height HTML attributes on the <img> itself (header.html) are the
+// other half of the same defense - a real fallback, not just a CSS fight.
+.site-title .site-title-icon {
+  width: 50px !important;
+  height: 50px !important;
+  vertical-align: middle;
+  margin-right: 8px;
+  border-radius: 50%;
+}
+
+.site-footer strong {
+  color: #2a6f4a;
+}
+
+.footer-meta {
+  font-size: 14px;
+  opacity: 0.75;
+}
+
+.hero-banner {
+  display: block;
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  margin: 0 auto 30px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+}
+
+.hero-screenshot {
+  display: block;
+  max-width: 320px;
+  width: 100%;
+  height: auto;
+  margin: 30px auto;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+}
+
+.feature-block {
+  margin: 50px 0;
+  text-align: center;
+}
+
+.feature-block p {
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.feature-block img {
+  display: block;
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  margin: 16px auto 0;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    // Base color matches the gradient's bottom stop below, so the header's
+    // gradient (right below) has no visible seam where it ends.
+    background-color: #0e2449;
+    color: #fcfcfc;
+  }
+
+  .site-header {
+    // Same gradient used behind the Play Store feature graphic, so the site
+    // and the store listing feel like the same brand. Spread over the
+    // header's own (short) height instead of the whole page, so it actually
+    // reads as a banner instead of an imperceptible page-length fade.
+    background-image: linear-gradient(to bottom, #1b3661, #0e2449);
+  }
+
+  .site-title,
+  .site-title:visited,
+  .site-nav .page-link,
+  a,
+  a:visited,
+  a:hover {
+    color: #66c693;
+  }
+
+  // minima gives the mobile nav dropdown its own opaque background (light,
+  // since it's a popover over page content) with enough specificity to beat
+  // the overrides above, so it needs to be set explicitly too -- but only
+  // for the dropdown itself (max-width: 600px). Left unscoped, this would
+  // also paint over the header's gradient on desktop.
+  @media screen and (max-width: 600px) {
+    .site-nav {
+      background-color: #132b52;
+    }
+  }
+
+  .site-nav .menu-icon > svg {
+    fill: #66c693;
+  }
+
+  .page-content {
+    color: #fcfcfc;
+  }
+
+  .hero-banner,
+  .hero-screenshot,
+  .feature-block img {
+    border-color: #1f4584;
+  }
+
+  .site-footer {
+    border-top-color: #1f4584;
+  }
+
+  .site-footer strong {
+    color: #66c693;
+  }
+}
+
+// Horizon has no wide feature graphic yet, so the landing page leads with
+// the app icon. `.hero-banner` is sized for a 1024x500 banner and would
+// blow a square icon up to 700px tall, so square art gets its own class
+// rather than being forced through that one.
+.hero-icon {
+  display: block;
+  width: 180px;
+  height: auto;
+  margin: 0 auto 30px;
+  border-radius: 24px;
+}

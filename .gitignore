@@ -1,0 +1,7 @@
+# OS junk
+.DS_Store
+
+# AI - settings.local.json is per-machine tool-permission noise, not meant
+# to sync; everything else under .claude/ (skills, etc.) is meant to be
+# shared/backed up, same as AGENTS.md.
+.claude/settings.local.json
