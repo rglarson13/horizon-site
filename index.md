@@ -59,4 +59,4 @@ Want to help test Horizon before it's released? [Email me](mailto:HorizonNetWort
 
 - [Privacy Policy](privacy-policy.md)
 - [Get Help](get-help.md)
-- [About the developer](about-dev.md)
+- [About the Developer](about-dev.md)

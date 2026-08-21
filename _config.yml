@@ -8,7 +8,10 @@ description: Net-worth projection without accounts, cloud sync, or bank connecti
 author: Robert Larson
 email: HorizonNetWorthApp@gmail.com
 
+# Same shortlist logic as runway-site: help first, because that's what
+# someone in trouble is looking for. No Support page here yet, and no
+# Technical Notes until there are releases to write up.
 header_pages:
-  - privacy-policy.md
   - get-help.md
+  - privacy-policy.md
   - about-dev.md
