@@ -43,12 +43,16 @@ a cosmetic problem.
      home (an analytics SDK, a crash reporter, `expo-updates`, billing).
    - *"no analytics or tracking", "no crash reporter", "no ads"* -- same check.
    - *"Horizon requests no runtime permissions"* -- check `app.json` and any new native module.
-   - *The Android backup paragraph* -- it is written to match whatever `android.allowBackup` is
-     in `~/savingsplan/app.json`. If that setting changes, this paragraph is wrong until it's
-     rewritten. Runway sets it to `false`; Horizon currently does not.
-   - *The diagnostics-log paragraph* -- it claims the log records no account names or figures.
-     That's a property of `labelFor` in `~/savingsplan/src/data/expoSqliteClient.ts`. If logging
-     grows, confirm it's still true.
+   - *The Android backup and transfer paragraph* -- it is written to match `android.allowBackup`
+     (`false`) and the `./plugins/withNoDataExtraction` plugin in `~/savingsplan/app.json`, which
+     excludes every storage domain from device-to-device transfer. If either changes, this
+     paragraph is wrong until it's rewritten. `privacyPolicyMatchesCode.test.ts` in the app repo
+     pins both.
+   - *The diagnostics-log paragraph* -- it claims the log records no account names or figures,
+     and lists what it does record (database opens, app open/background/resume times, failed
+     operations). Names and figures are kept out by `labelFor` in
+     `~/savingsplan/src/data/statementLabel.ts`, tested in `statementLabel.test.ts`. If logging
+     grows, confirm the list is still complete.
 
 4. **Check sibling pages for now-stale privacy claims.** This is the part that's easy to skip
    and is exactly why this is a skill and not just a copy command. `~/horizon-site/AGENTS.md`

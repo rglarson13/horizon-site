@@ -3,7 +3,7 @@ layout: page
 title: Privacy Policy
 ---
 
-**Effective date: August 21, 2026**
+**Effective date: October 13, 2026**
 
 Horizon is a net-worth tracking app. This policy is short because the honest answer to "what do you do with my data?" is: nothing. We never see it.
 
@@ -31,21 +31,21 @@ App installs and updates through Google Play are handled by Google Play itself a
 
 All of your data is kept in a local database on your device. If you delete the app, that database is deleted with it.
 
-**Because of this, exporting is your only backup.** Exports are created only when you choose to make one, from Settings → Back up your data. Horizon writes the file and hands it to your phone's own share sheet -- you choose where it goes. Restoring works the same way in reverse, through your device's own file picker. What you do with an export file -- save it, email it, move it to another phone -- is entirely your choice and happens through your device's features, not through any service of ours.
+**Because of this, exporting is your only backup.** Exports are created only when you choose to make one, in one of two places: a full backup from Settings → Back up your data, or a spreadsheet of the accounts-by-years table from that table's own "Export as a spreadsheet" button. Either way, Horizon writes the file and hands it to your phone's own share sheet -- you choose where it goes. Restoring works the same way in reverse, through your device's own file picker. What you do with an export file -- save it, email it, move it to another phone -- is entirely your choice and happens through your device's features, not through any service of ours.
 
-An export contains everything Horizon knows about your finances, in plain readable text. Treat it the way you would treat any document containing your account balances.
+A full backup contains everything Horizon knows about your finances, in plain readable text; a spreadsheet contains the balances shown in the table. Treat either the way you would treat any document containing your account balances.
 
-**Android's own backup.** Horizon does not currently opt out of Android's automatic app backup, which means Android may include the app's data in the device backup associated with your Google account. That backup is between you, your device, and Google -- it is covered by [Google's privacy policy](https://policies.google.com/privacy), and Horizon has no access to it and no way to read it.
+**Android's own backup and transfer.** Horizon opts out of Android's automatic app backup, and excludes all of its data from Android's device-to-device transfer, so none of it -- neither your finances nor its diagnostics log -- is copied into the device backup associated with your Google account or carried across when you move to a new phone. This is also why exporting really is your only backup: moving to a new phone means exporting from the old one and restoring on the new one.
 
 ## Diagnostics
 
 Horizon keeps a small log on your device to help diagnose problems with its own database -- what failed, and what the app was doing at the time. It is stored in a plain file on your device and **is never sent anywhere automatically**.
 
-It deliberately records no account names, no balances, and no values you have entered -- only the shape of the operation that failed, such as `run UPDATE rollup_members SET`. You can view how many problems have been recorded, share the log, or delete it, from Settings → Diagnostics. If you choose to share it, it goes wherever you send it, through your phone's share sheet.
+It deliberately records no account names, no balances, and no values you have entered. What it does record, each with the time it happened: when the app opened its database, when the app was opened, sent to the background and brought back, and -- when something goes wrong -- the shape of the operation that failed, such as `run UPDATE rollup_members SET`. The times are there so a failure can be understood in context; they also mean the log shows when you used the app. It keeps the most recent few hundred entries from the current session and the one before it. You can view how many problems have been recorded, share the log, or delete it, from Settings → Diagnostics. If you choose to share it, it goes wherever you send it, through your phone's share sheet.
 
 ## Permissions
 
-Horizon requests no runtime permissions. It has no access to your camera, microphone, location, contacts, or photos. Reading and writing backup files happens through the system file picker and share sheet, which grant access to the single file you pick, at the moment you pick it.
+Horizon requests no runtime permissions. It has no access to your camera, microphone, location, contacts, or photos. Reading and writing backup files happens through the system file picker and share sheet, which grant access to the single file you pick, at the moment you pick it. A handful of install-time permissions -- including internet access -- come bundled with libraries Horizon uses for other things, but nothing in Horizon calls for them, and the app is built to block all of them at the operating-system level rather than merely leaving them unused.
 
 ## What we will never do
 

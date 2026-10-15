@@ -18,4 +18,6 @@ When reporting a bug, please include:
 
 If the problem involved an error message mentioning the database, Settings →
 Diagnostics → **Share the log** will attach far more detail than a description
-can. The log records no account names or figures.
+can. The log records no account names or figures -- just what failed, and the
+times Horizon was opened and put in the background, so a problem can be read in
+context. You can open it before you send it.
