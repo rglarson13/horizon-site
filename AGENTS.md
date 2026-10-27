@@ -76,7 +76,7 @@ Do not add content that suggests:
 
 `privacy-policy.md`'s content is **not authored here** -- it is mirrored from the app repo (`~/savingsplan/docs/privacy-policy.md`), which is the source of truth. Use the `sync-privacy-policy` skill to pull an update rather than editing this page's substance directly (formatting/voice fixes that don't change what's disclosed are fine to make here directly).
 
-The reason for that arrangement: every claim in the policy has to be checkable against the code that implements it, and the code lives in the app repo. Horizon's policy currently claims the app makes **no network requests at all** -- that is a strong claim, it is true today, and it stops being true the moment a dependency that phones home is added. Verify before restating it.
+The reason for that arrangement: every claim in the policy has to be checkable against the code that implements it, and the code lives in the app repo. Horizon's policy currently claims the app makes **no network requests of its own** -- that is a strong claim, it is true today, and it stops being true the moment a dependency that phones home is added. The one exception it discloses is Google Play's, not Horizon's: the licence check Play adds to the copy it delivers (since the October 27, 2026 policy). Verify before restating either.
 
 If privacy behavior changes in the future, update all relevant pages:
 - privacy-policy.md
